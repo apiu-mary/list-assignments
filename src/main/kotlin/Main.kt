@@ -6,6 +6,8 @@ fun main(){
     person()
     var u= mileage(listOf(Car(303,20),Car(202,40)))
     println(u)
+    person()
+    
 
 
 }
@@ -38,7 +40,19 @@ fun  person(){
     var total =listOf<Person>(person1,person2,person3)
     val sorted2=total.sortedByDescending{ total->total.age}
     println(sorted2)
+//    4. Given a list similar to the one above, write a function in which you will
+//    create 2 more people objects and add them to the list at one go.
+data class Person2(var name:String,var age:Int,var height:Int,var weight:Int)
+    fun personnels  (){
+        var person1=Person("Mary",25,40,60)
+        var person2=Person("Judas",24,69,80)
+        var person3=Person("Gloria",30,60,80)
+        var person4=Person("Angella",30,60,50)
+        var person5=Person("Eunice",39,69,50)
+        var totals=listOf<Person>(person1,person2,person3,person4,person5)
+        println(totals)
 
+    }
 
 
 //    Given a list similar to the one above, write a function in which you will
