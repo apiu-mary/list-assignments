@@ -4,6 +4,8 @@ fun main(){
    var x= heights(listOf(20,30,50,70))
     println(x)
     person()
+    var u= mileage(listOf(Car(303,20),Car(202,40)))
+    println(u)
 
 
 }
@@ -41,6 +43,22 @@ fun  person(){
 
 //    Given a list similar to the one above, write a function in which you will
 //    create 2 more people objects and add them to the list at one go.
+}
+//5. Write a function that takes in a list of Car objects each with a
+//registration and mileage attribute and returns the average mileage of
+//all the vehicles in the list.
+data class Car(var registration:Int,var mileage:Int)
+
+fun mileage( cars: List<Car>):Int{
+    var count=0
+    for (i in cars){
+        count += i.mileage
+    }
+    var average=cars.count()
+    return average
+
+
+
 }
 
 
